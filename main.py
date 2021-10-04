@@ -10,4 +10,6 @@ soup = BeautifulSoup(source, 'lxml')
 # finds the temprature section from the html document
 temprature_val = soup.find("span", {"class": "DailyContent--temp--3d4dn","data-testid": "TemperatureValue"})
 current_temp = temprature_val.text
-print(current_temp)
+weather_status = soup.find("p", {"class": "DailyContent--narrative--hplRl", "data-testid": "wxPhrase"})
+weather_report = weather_status.text
+print(current_temp, weather_report)
