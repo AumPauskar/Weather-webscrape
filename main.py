@@ -8,6 +8,6 @@ source = requests.get('https://weather.com/en-IN/weather/tenday/l/Istanbul+Park+
 # grabs the html document
 soup = BeautifulSoup(source, 'lxml')
 # finds the temprature section from the html document
-article = soup.find("span", {"class": "DailyContent--temp--3d4dn","data-testid": "TemperatureValue"})
-current_temp = article.text
+temprature_val = soup.find("span", {"class": "DailyContent--temp--3d4dn","data-testid": "TemperatureValue"})
+current_temp = temprature_val.text
 print(current_temp)
