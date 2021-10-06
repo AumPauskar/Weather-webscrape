@@ -1,19 +1,21 @@
-import smtplib
-import os
+def SendMail(mail_report):
 
-sender_mail = os.get.environ('tmail')
-sender_pswd = os.get.environ('tpwd')
-reciever_mail = 'aumpauskar111@gmail.com'
-with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
-	smtp.ehlo()
-	smtp.starttls()
-	smtp.ehlo()
-	smtp.login(sender_mail, sender_pswd)
+	import smtplib
+	import os
 
-	subject = 'Weather'
-	body = '11'
+	sender_mail = os.environ.get('tmail')
+	sender_pswd = os.environ.get('tpwd')
+	reciever_mail = 'aumpauskar111@gmail.com'
+	with smtplib.SMTP('smtp.gmail.com', 587) as smtp:
+		smtp.ehlo()
+		smtp.starttls()
+		smtp.ehlo()
+		smtp.login(sender_mail, sender_pswd)
 
-	msg = f'Subject: {subject}\n\n{body}'
+		subject = 'Weather at istambul park, Turkey'
+		body = mail_report
 
-	smtp.sendmail(sender_mail, sender_pswd, msg)
-	
+		msg = f'Subject: {subject}\n\n{body}'
+
+		smtp.sendmail(sender_mail, reciever_mail, msg)
+		
