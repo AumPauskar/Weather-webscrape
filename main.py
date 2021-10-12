@@ -17,16 +17,20 @@ temprature_val = soup.find("span", {"class": "DailyContent--temp--3d4dn","data-t
 current_temp = temprature_val.text
 weather_status = soup.find("p", {"class": "DailyContent--narrative--hplRl", "data-testid": "wxPhrase"})
 weather_report = weather_status.text
+status = current_temp + '.' + weather_report
 
-for a in range(len(current_temp)-1):
-	temp += current_temp[a]
-print(temp)
+for a in range(len(status)-1):
+	if status[a] == chr(176):
+		pass
+	elif status[a] == chr(186):
+		pass
+	else:
+		temp += status[a]
 
 
 # compiles the message in the script
 mail_report = 'Hello viewer the current F1 season is looking like a great treat, especially '
 mail_report += 'here at Istambul Park Turkey. The temprature right now at the track is '
-mail_report += str(temp) + '.' 
-mail_report += weather_report
-print(mail_report)
+mail_report += temp + '.'
 mailing.SendMail(mail_report)
+print('Message sent')
