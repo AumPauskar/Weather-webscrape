@@ -1,4 +1,4 @@
-def SendMail(mail_report):
+def SendMail(mail_report, subject):
 
 	import smtplib
 	import os
@@ -12,7 +12,7 @@ def SendMail(mail_report):
 		smtp.ehlo()
 		smtp.login(sender_mail, sender_pswd)
 
-		subject = 'Weather at istambul park, Turkey'
+		subject = subject
 		body = mail_report
 
 		msg = f'Subject: {subject}\n\n{body}'

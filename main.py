@@ -3,13 +3,13 @@
 from bs4 import BeautifulSoup
 import requests
 import mailing
+import file_seeker
 
 # dependances
 temp = ''
-file = open('location_data.dat', 'r')
-data = file.read()
-words = data.split('\n')
-url = words[2]
+url = file_seeker.GetLocation()
+mail_report = file_seeker.GetMessage()
+subject = file_seeker.GetSubject()
 
 
 # required url, may do json/txt in the future
@@ -34,8 +34,6 @@ for a in range(len(status)-1):
 
 
 # compiles the message in the script
-mail_report = 'Hello viewer the current F1 season is looking like a great treat, especially '
-mail_report += 'here at Istambul Park Turkey. The temprature right now at the track is '
 mail_report += temp + '.'
-mailing.SendMail(mail_report)
+mailing.SendMail(mail_report, subject)
 print('Message sent')

@@ -1,3 +1,12 @@
-Note: Please gat the link from weather.com, other links will cause error
-Also please paste the link on line 3
-https://weather.com/en-IN/weather/tenday/l/Belgaum+Karnataka?canonicalCityId=262643b6908b36786488189f7d46e8f29986f1e55aa49a51db44f9def23aa578
+{
+	"_comment-help": "Help notes are labeled as shown here you can see the tag starting with a _",
+
+	"_weather-help": "All the weather must be taken from weather.com and must be a 10 day view for ensuring no errors",
+	"weather-tag": "https://weather.com/en-IN/weather/tenday/l/Belgaum+Karnataka?canonicalCityId=262643b6908b36786488189f7d46e8f29986f1e55aa49a51db44f9def23aa578",
+
+	"_subject-help": "The email which you are sending to the reciepent will contain two wlwments; subject and the actual message, here you can edit the subject of the mail",
+	"subject-tag": "Weather report",
+	
+	"_message-help": "Please leave your message in this one line only, if you want to add a new line then please use newline chr for inserting a new line",
+	"message-tag": "Hello user we hope that you are doing well, here is your weather report of Belgaum"
+}
