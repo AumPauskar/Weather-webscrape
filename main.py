@@ -6,9 +6,14 @@ import mailing
 
 # dependances
 temp = ''
+file = open('location_data.dat', 'r')
+data = file.read()
+words = data.split('\n')
+url = words[2]
+
 
 # required url, may do json/txt in the future
-source = requests.get('https://weather.com/en-IN/weather/tenday/l/Istanbul+Park+16774:25:TU').text
+source = requests.get(url).text
 # grabs the html document
 soup = BeautifulSoup(source, 'lxml')
 
