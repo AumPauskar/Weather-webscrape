@@ -1,15 +1,20 @@
 {
-    "reciever": [
-        {
-            "name": "",
-            "email": "",
-            "phone-no": ""
-        },
+	"sender": [
+		{
+			"email": "-->enter sender adress",
+			"password": "-->enter sender password"
+		}
+	],
 
-        {
-            "name": "",
-            "email": "",
-            "phone-no": ""
-        }
-    ]
+	"receiver": [
+		{
+			"name": "-->enter receiver name #1",
+			"email": "-->enter receiver adress #1"
+		},
+
+		{
+			"name": "-->enter receiver name #2",
+			"email": "-->enter receiver adress #2"
+		}
+	]
 }
