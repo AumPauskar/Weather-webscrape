@@ -10,11 +10,6 @@
 		{
 			"name": "-->enter receiver name #1",
 			"email": "-->enter receiver adress #1"
-		},
-
-		{
-			"name": "-->enter receiver name #2",
-			"email": "-->enter receiver adress #2"
 		}
 	]
 }
